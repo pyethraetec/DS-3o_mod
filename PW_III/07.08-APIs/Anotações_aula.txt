@@ -1,0 +1,50 @@
+
+api = portão do banco de dados
+
+rest = disponibiliza info
+ - método, padronização das apis
+
+organização de COMO a info vai ser acessada
+
+post = envio
+ quando a api trablha com post é atraves de um forms ou dentro de um padrão json
+ex: api/:{"20333"}.json
+
+get = consulta
+ quando a api trabalha com get, o acesso é como se fosse em pastas => na url
+ex: api/20333
+
+endpoint = endereço que vai disponibilizar as infos (source)
+
+visual studio 2022 => ide
+tem server embutido
+
+
+lts = versão de longo prazo, a melhor opção, mais estável
+usar dotnet 8
+
+c# sempre orientado a objetos 
+
+
+webApplication = gera automático o proj
+
+builder = ferramentas que vão ser utilizadas
+
+app = 
+recebe todo o cod da api {codigo, return}
+
+OpenApi = padrão de trabalho
+
+api é um serviço, não tem formato pronto
+
+mapGet = método padrão pra Get
+
+
+dependências são os pacotes, dá pra instalar normal
+
+
+tipo de projeto que vai ser utilizado é o dotnet core minimal apis
+
+using pra puxar pacotes, paralelo ao required
+
+
