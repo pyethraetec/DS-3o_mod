@@ -48,3 +48,7 @@ tipo de projeto que vai ser utilizado é o dotnet core minimal apis
 using pra puxar pacotes, paralelo ao required
 
 
+
+outra ponta dos metodos get, post
+o que sai no results
+
