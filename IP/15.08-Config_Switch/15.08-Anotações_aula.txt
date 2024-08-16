@@ -1,0 +1,41 @@
+
+
+Para acessar infos de IP -> 
+ipconfig/all no DOS
+
+teste de conexão -> 
+ping 192.168.1.100
+
+
+
+
+
+Cabeamento
+
+Tipos de cabo:
+
+Podem ter padrões de cabo T568A e T568B
+
+
+Crossover: pontas com padrões diferentes
+ex: T568A ------- T568B
+
+Direto: pontas com padrões iguais
+ex: T568A ------- T568A 
+
+***Equipamentos iguais precisam de cabos crossover -> PC ---- PC
+
+
+
+RS 232 = conexão serial de 9 pinos
+
+
+Velocidade de conexão:
+Ethernet = 
+Fast Ethernet =
+Mega Ethernet =
+
+DNS = pra servidores
+
+
+

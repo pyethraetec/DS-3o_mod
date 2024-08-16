@@ -1,0 +1,12 @@
+
+
+withName = dá nome pro endpoint
+
+mapPost = (endPoint, TipoReq, tipoDado, nomeVariavel)
+	app.mapPost ("/dados", ([FromBody]) JsonObject dados) => {
+
+	}
+	.withName ("dados");
+
+Postman => teste de endpoint
+
