@@ -1,0 +1,30 @@
+
+
+servers sempre ficam ou nas primeiras portas ou nas ultimas portas do switch
+
+server não pega endereço de DHCP - IP dinamico
+server é sempre ip fixo!!
+
+serviços do server são configurados conforme protocolo
+
+server dns - 
+
+serverPool 
+por padrão começa no zero - 
+
+192.168.1. * 0 * - primeiro, identificador do servidor
+192.168.1. * 255 * - ultimo, serve pra broadcast
+
+subnet mask - não precisa ser configurado em redes tipo C
+
+windows determina o protocolo por DHCP por padrão
+
+
+⁍ ATIVIDADE ⁍
+
+Criar uma rede Cliente - Servidor
+1 server, 1 switch e 3 pcs
+
+1 server - IP 192.168.1.1 / 255.255.255.0
+20 ET - IP via DHCP
+
