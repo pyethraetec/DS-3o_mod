@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Professor\\Desktop\\aula\\aula\\aula.csproj": {}
+    "C:\\Users\\Aluno\\Documents\\pyethra\\DS-3o_mod\\PW_III\\22.08-ConexaoBD\\api-bancodedados\\aula\\aula.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Professor\\Desktop\\aula\\aula\\aula.csproj": {
+    "C:\\Users\\Aluno\\Documents\\pyethra\\DS-3o_mod\\PW_III\\22.08-ConexaoBD\\api-bancodedados\\aula\\aula.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Professor\\Desktop\\aula\\aula\\aula.csproj",
+        "projectUniqueName": "C:\\Users\\Aluno\\Documents\\pyethra\\DS-3o_mod\\PW_III\\22.08-ConexaoBD\\api-bancodedados\\aula\\aula.csproj",
         "projectName": "aula",
-        "projectPath": "C:\\Users\\Professor\\Desktop\\aula\\aula\\aula.csproj",
-        "packagesPath": "C:\\Users\\Professor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Professor\\Desktop\\aula\\aula\\obj\\",
+        "projectPath": "C:\\Users\\Aluno\\Documents\\pyethra\\DS-3o_mod\\PW_III\\22.08-ConexaoBD\\api-bancodedados\\aula\\aula.csproj",
+        "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Aluno\\Documents\\pyethra\\DS-3o_mod\\PW_III\\22.08-ConexaoBD\\api-bancodedados\\aula\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Professor\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

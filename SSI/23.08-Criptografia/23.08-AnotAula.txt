@@ -1,0 +1,62 @@
+
+ISO 27001
+
+Confidencialidade, Integridade e Disponibilidade
+
+
+Garantindo segurança da informação
+    Criptografando a mensagem - hash
+    Cuidando do caminho da mensagem - assinaturas e protocolos 
+
+
+Cifra de César
+Criptografa a mensagem baseada no alfabeto, sendo a letra original da palavra sendo substituida pela quantidade de letras que foi definida na rotação
+
+Garante Confidencialidade e Integridade
+   
+ex:
+ Rotação 2
+ boa noite = dqc pqkvg
+
+
+https://rot13.com/  - gera cifra
+https://dcode.fr/ceaser-cipher - quebra cifra
+
+criptografia simetrica 
+chave publica
+chave privada
+
+
+
+criptografando pelo terminal
+
+comando cmd
+
+copy con textopuro.txt - inicia criação do arquivo
+
+control + z =  cria arquivo
+
+type textopuro.txt - exibe conteudo do arquivo no win
+
+more textopuro.txt - 
+
+out openssl aes-256-cbc -in textopuro.txt
+
+para criptografar: openssl aes-256-cbc -in TextoPuro.txt -out TextoCifrado.enc -k 12345@qwe
+
+open ssl = algoritmo que vai fazer a criptografia
+
+aes-256-cbc = a chave de criptografia
+
+-in = qual arquivo de input
+-out = qual arquivo de output
+.enc = extensão do arquivo criptado
+
+-k = criação de senha
+
+
+para descriptografar: openssl aes-256-cbc -d -in TextoCifrado.enc -out textoCriptado.txt -k 12345@qwe
+
+
+
+

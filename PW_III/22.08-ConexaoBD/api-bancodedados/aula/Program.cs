@@ -20,8 +20,7 @@ app.MapGet("/cursos", () =>
 
     //criei um comando sql para consultar o banco
     MySqlCommand sql = new MySqlCommand("SELECT * FROM cursos",conexao);
-
-    //criei uma tabela de dados virtual
+    
     DataTable dados = new DataTable();
 
     //carreguei essa tabela com a leitura do SQL
