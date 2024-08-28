@@ -1,0 +1,287 @@
+
+porta padrão = 27017
+mongodb://127.0.0.1:27017/
+
+
+
+
+script:
+
+Please enter a MongoDB connection string (Default: mongodb://localhost/): 27017
+27017
+Current Mongosh Log ID: 66ce77201233dd0c8f2710bb
+Connecting to:          mongodb://127.0.0.1:27017/27017?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.0
+Using MongoDB:          7.0.14
+Using Mongosh:          2.3.0
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2024-08-27T21:51:59.829-03:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+27017> show dbs
+admin    40.00 KiB
+config  108.00 KiB
+local    72.00 KiB
+27017> use db
+switched to db db
+db> db.collectioninicial.insertOne({nome: "Vitor", idade:"18"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce7aeb1233dd0c8f2710bc')
+}
+db> db.collectioninicial.findOne()
+{
+  _id: ObjectId('66ce7aeb1233dd0c8f2710bc'),
+  nome: 'Vitor',
+  idade: '18'
+}
+db> use escola
+switched to db escola
+escola> db.collectioninicial.insert({nomeAluno: "Vitor",CPF: "00000000000", fone:"18",email:"vitor@email.com(", turma:""})
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('66ce7ec01233dd0c8f2710bd') }
+}
+escola> db.collectioninicial.insertMany({nomeAluno: "Vitor",CPF: "00000000000", fone:"18",email:"vitor@email.com(", turma:""}, )
+escola>
+
+escola> db.collectioninicial.insertMany({nomeAluno: "Vitor",CPF: "00000000000", fone:"18",email:"vitor@email.com(", turma:""}, {nomeAluno: "Samuelescola> db.collectioninicial.insertMany({nomeAluno: "Vitor",CPF: "00000000000", fone:"18",email:"vitor@email.com(", turma:""}, {nomeAluno: "Samuel)
+Uncaught:
+SyntaxError: Unterminated string constant. (1:131)
+
+> 1 | db.collectioninicial.insertMany({nomeAluno: "Vitor",CPF: "00000000000", fone:"18",email:"vitor@email.com(", turma:""}, {nomeAluno: "Samuel)
+    |                                                                                                                                    ^
+  2 |
+
+escola> db.collectioninicial.insertOne({nomeAluno: "Vitor",CPF: "000.000.000.10", fone:"18",email:"vitor@email.com", turma:"DS 2024"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce7f811233dd0c8f2710be')
+}
+escola> db.collectioninicial.insertOne({nomeAluno: "Samuel",CPF: "000.000.000.20", fone:"118",email:"samuel@email.com", turma:"DS 2024"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce7f9e1233dd0c8f2710bf')
+}
+escola> db.collectioninicial.insertOne({nomeAluno: "Apolo",CPF: "000.000.000.30", fone:"201118",email:"apolo@email.com", turma:"DS 2024"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce7fb41233dd0c8f2710c0')
+}
+escola> db.collectioninicial.insertOne({nomeAluno: "Maria Eduarda",CPF: "000.000.000.40", fone:"22180",email:"duda@email.com", turma:"DS 2024"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce7fce1233dd0c8f2710c1')
+}
+escola> db.collectioninicial.insertOne({nomeAluno: "Luis",CPF: "000.000.000.50", fone:"26580",email:"luis@email.com", turma:"DS 2024"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce7fe41233dd0c8f2710c2')
+}
+escola> db.collectioninicial.insertOne({nomeAluno: "Roberto",CPF: "000.000.000.60", fone:"25540",email:"roberto@email.com", turma:"DS 2024"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce7ffa1233dd0c8f2710c3')
+}
+escola> db.collectioninicial.insertOne({nomeAluno: "Eduardo",CPF: "000.000.000.70", fone:"45540",email:"eduardo@email.com", turma:"DS 2024"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce80141233dd0c8f2710c4')
+}
+escola> db.collectioninicial.insertOne({nomeAluno: "Jorge",CPF: "000.000.000.80", fone:"48890",email:"jorge@email.com", turma:"DS 2024"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce80301233dd0c8f2710c5')
+}
+escola> db.collectioninicial.insertOne({nomeAluno: "Eliana",CPF: "000.000.000.90", fone:"33540",email:"eliana@email.com", turma:"DS 2024"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce80491233dd0c8f2710c6')
+}
+escola> db.collectioninicial.insertOne({nomeAluno: "Eliana",CPF: "000.000.001.
+Uncaught:
+SyntaxError: Unterminated string constant. (1:57)
+
+> 1 | db.collectioninicial.insertOne({nomeAluno: "Eliana",CPF: "000.000.001.
+    |                                                          ^
+  2 |
+
+escola> db.collectioninicial.insertOne({nomeAluno: "Jupiter",CPF: "000.000.001.00", fone:"666440",email:"jupiter@email.com", turma:"DS 2024"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce80761233dd0c8f2710c7')
+}
+escola> db.collectioninicial.insertOne({nomeAluno: "Seraphena",CPF: "000.000.001.10", fone:"222140",email:"seraphena@email.com", turma:"DS 2024"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce808f1233dd0c8f2710c8')
+}
+escola> db.collectioninicial.insertOne({nomeAluno: "Penelope",CPF: "000.000.001.20", fone:"5544140",email:"penelope@email.com", turma:"DS 2024"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce80a81233dd0c8f2710c9')
+}
+escola> db.collectioninicial.insertOne({nomeAluno: "Nyktos",CPF: "000.000.001.30", fone:"5994140",email:"nyktos@email.com", turma:"DS 2024"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce80c01233dd0c8f2710ca')
+}
+escola> db.collectioninicial.insertOne({nomeAluno: "Eithos",CPF: "000.000.001.40", fone:"6662140",email:"eithos@email.com", turma:"DS 2024"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce80dd1233dd0c8f2710cb')
+}
+escola> db.collectioninicial.insertOne({nomeAluno: "Julia",CPF: "000.000.001.50", fone:"662511",email:"julia@email.com", turma:"DS 2024"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('66ce80f61233dd0c8f2710cc')
+}
+escola> db.collectioninicial.insertMany()
+MongoshInvalidInputError: [COMMON-10001] Missing required argument at position 0 (Collection.insertMany)
+escola> db.collectioninicial.findMany()
+TypeError: db.collectioninicial.findMany is not a function
+escola> db.collectioninicial.findOne()
+{
+  _id: ObjectId('66ce7ec01233dd0c8f2710bd'),
+  nomeAluno: 'Vitor',
+  CPF: '00000000000',
+  fone: '18',
+  email: 'vitor@email.com(',
+  turma: ''
+}
+escola> db.collectioninicial.find()
+[
+  {
+    _id: ObjectId('66ce7ec01233dd0c8f2710bd'),
+    nomeAluno: 'Vitor',
+    CPF: '00000000000',
+    fone: '18',
+    email: 'vitor@email.com(',
+escola>
+  },
+  {
+    _id: ObjectId('66ce7f811233dd0c8f2710be'),
+    nomeAluno: 'Vitor',
+    CPF: '000.000.000.10',
+    fone: '18',
+    email: 'vitor@email.com',
+    turma: 'DS 2024'
+  },
+  {
+    _id: ObjectId('66ce7f9e1233dd0c8f2710bf'),
+    nomeAluno: 'Samuel',
+    CPF: '000.000.000.20',
+    fone: '118',
+    email: 'samuel@email.com',
+    turma: 'DS 2024'
+  },
+  {
+    _id: ObjectId('66ce7fb41233dd0c8f2710c0'),
+    nomeAluno: 'Apolo',
+    CPF: '000.000.000.30',
+    fone: '201118',
+    email: 'apolo@email.com',
+    turma: 'DS 2024'
+  },
+  {
+    _id: ObjectId('66ce7fce1233dd0c8f2710c1'),
+    nomeAluno: 'Maria Eduarda',
+    CPF: '000.000.000.40',
+    fone: '22180',
+    email: 'duda@email.com',
+    turma: 'DS 2024'
+  },
+  {
+    _id: ObjectId('66ce7fe41233dd0c8f2710c2'),
+    nomeAluno: 'Luis',
+    CPF: '000.000.000.50',
+    fone: '26580',
+    email: 'luis@email.com',
+    turma: 'DS 2024'
+  },
+  {
+    _id: ObjectId('66ce7ffa1233dd0c8f2710c3'),
+    nomeAluno: 'Roberto',
+    CPF: '000.000.000.60',
+    fone: '25540',
+    email: 'roberto@email.com',
+    turma: 'DS 2024'
+  },
+  {
+    _id: ObjectId('66ce80141233dd0c8f2710c4'),
+    nomeAluno: 'Eduardo',
+    CPF: '000.000.000.70',
+    fone: '45540',
+    email: 'eduardo@email.com',
+    turma: 'DS 2024'
+  },
+  {
+    _id: ObjectId('66ce80301233dd0c8f2710c5'),
+    nomeAluno: 'Jorge',
+    CPF: '000.000.000.80',
+    fone: '48890',
+    email: 'jorge@email.com',
+    turma: 'DS 2024'
+  },
+  {
+    _id: ObjectId('66ce80491233dd0c8f2710c6'),
+    nomeAluno: 'Eliana',
+    CPF: '000.000.000.90',
+    fone: '33540',
+    email: 'eliana@email.com',
+    turma: 'DS 2024'
+  },
+  {
+    _id: ObjectId('66ce80761233dd0c8f2710c7'),
+    nomeAluno: 'Jupiter',
+    CPF: '000.000.001.00',
+    fone: '666440',
+    email: 'jupiter@email.com',
+    turma: 'DS 2024'
+  },
+  {
+    _id: ObjectId('66ce808f1233dd0c8f2710c8'),
+    nomeAluno: 'Seraphena',
+    CPF: '000.000.001.10',
+    fone: '222140',
+    email: 'seraphena@email.com',
+    turma: 'DS 2024'
+  },
+  {
+    _id: ObjectId('66ce80a81233dd0c8f2710c9'),
+    nomeAluno: 'Penelope',
+    CPF: '000.000.001.20',
+    fone: '5544140',
+    email: 'penelope@email.com',
+    turma: 'DS 2024'
+  },
+  {
+    _id: ObjectId('66ce80c01233dd0c8f2710ca'),
+    nomeAluno: 'Nyktos',
+    CPF: '000.000.001.30',
+    fone: '5994140',
+    email: 'nyktos@email.com',
+    turma: 'DS 2024'
+  },
+  {
+    _id: ObjectId('66ce80dd1233dd0c8f2710cb'),
+    nomeAluno: 'Eithos',
+    CPF: '000.000.001.40',
+    fone: '6662140',
+    email: 'eithos@email.com',
+    turma: 'DS 2024'
+  },
+  {
+    _id: ObjectId('66ce80f61233dd0c8f2710cc'),
+    nomeAluno: 'Julia',
+    CPF: '000.000.001.50',
+    fone: '662511',
+    email: 'julia@email.com',
+    turma: 'DS 2024'
+  }
+]
+escola>
