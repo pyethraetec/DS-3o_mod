@@ -99,3 +99,4 @@ C:\Users\Aluno\Documents\pyethra\DS-3o_mod\PW_III\14.08-Exercicio_API_Postman\au
 C:\Users\Aluno\Documents\pyethra\DS-3o_mod\PW_III\14.08-Exercicio_API_Postman\aula\aula\obj\Debug\net8.0\aula.pdb
 C:\Users\Aluno\Documents\pyethra\DS-3o_mod\PW_III\14.08-Exercicio_API_Postman\aula\aula\obj\Debug\net8.0\aula.genruntimeconfig.cache
 C:\Users\Aluno\Documents\pyethra\DS-3o_mod\PW_III\14.08-Exercicio_API_Postman\aula\aula\obj\Debug\net8.0\ref\aula.dll
+C:\Users\Aluno\Documents\pyethra\DS-3o_mod\PW_III\14.08-Exercicio_API_Postman\aula\aula\bin\Debug\net8.0\Newtonsoft.Json.dll

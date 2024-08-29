@@ -1,0 +1,29 @@
+
+
+componentes
+pode ser estatico ou com estado
+originalmente é estatico
+é usado para criar navegações
+
+
+function app = componente para renderização
+
+
+componente de classe 
+
+onClick = onPress 
+chama função/método da classe 
+
+this = neste componente procure função
+
+construtor = primeiro a ser executado
+props = propriedades do construtor
+
+propriedades podem ser passadas dentro da tag
+<button text="Incrementar"/>    ===== text é propriedade da tag button
+
+super = manda pra classe pai
+
+
+shift + alt = digita varias linhas ao mesmo tempo
+

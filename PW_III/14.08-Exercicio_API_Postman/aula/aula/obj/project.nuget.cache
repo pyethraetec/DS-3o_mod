@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "K6ycfHWTiM8=",
+  "dgSpecHash": "HfIL5Imx+MA=",
   "success": true,
   "projectFilePath": "C:\\Users\\Aluno\\Documents\\pyethra\\DS-3o_mod\\PW_III\\14.08-Exercicio_API_Postman\\aula\\aula\\aula.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\Aluno\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\mysql.data\\9.0.0\\mysql.data.9.0.0.nupkg.sha512",
+    "C:\\Users\\Aluno\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\swashbuckle.aspnetcore\\6.7.0\\swashbuckle.aspnetcore.6.7.0.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.7.0\\swashbuckle.aspnetcore.swagger.6.7.0.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.7.0\\swashbuckle.aspnetcore.swaggergen.6.7.0.nupkg.sha512",

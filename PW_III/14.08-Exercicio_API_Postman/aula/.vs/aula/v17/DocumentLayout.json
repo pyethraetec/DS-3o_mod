@@ -1,37 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Aluno\\Documents\\pyethra\\DS-3o_mod\\PW_III\\14.08-Exercicio_API_Postman\\aula\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{0EE95D21-149E-47B4-A748-B621A4525993}|aula\\aula.csproj|c:\\users\\aluno\\documents\\pyethra\\ds-3o_mod\\pw_iii\\14.08-exercicio_api_postman\\aula\\aula\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0EE95D21-149E-47B4-A748-B621A4525993}|aula\\aula.csproj|solutionrelative:aula\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Aluno\\Documents\\pyethra\\DS-3o_mod\\PW_III\\14.08-Exercicio_API_Postman\\aula\\aula\\appsettings.json",
-              "RelativeDocumentMoniker": "aula\\appsettings.json",
-              "ToolTip": "C:\\Users\\Aluno\\Documents\\pyethra\\DS-3o_mod\\PW_III\\14.08-Exercicio_API_Postman\\aula\\aula\\appsettings.json",
-              "RelativeToolTip": "aula\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-08T01:05:22.19Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
