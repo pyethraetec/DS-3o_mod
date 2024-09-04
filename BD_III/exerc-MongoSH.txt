@@ -1,6 +1,7 @@
 
 db> use escola
 switched to db escola
+
 escola> db.collectioninicial.insert({nomeAluno: "Vitor",CPF: "00000000000", fone:"18",email:"vitor@email.com(", turma:""})
 DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
 {

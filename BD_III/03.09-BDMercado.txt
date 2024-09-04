@@ -1,0 +1,70 @@
+Please enter a MongoDB connection string (Default: mongodb://localhost/): 17027
+17027
+Current Mongosh Log ID: 66d7b6a0b4fcf03fb32710bb
+Connecting to:          mongodb://127.0.0.1:27017/17027?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.0
+Using MongoDB:          7.0.6
+Using Mongosh:          2.3.0
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+------
+   The server generated these startup warnings when booting
+   2024-09-03T22:23:29.994-03:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+17027> db.mercado.InsertOne({ })
+TypeError: db.mercado.InsertOne is not a function
+17027>
+
+17027> db.mercado.InsertOne({ })
+TypeError: db.mercado.InsertOne is not a function
+17027> db.mercado.InsertOne({
+...
+...
+17027> use mercado
+switched to db mercado
+mercado> db.createCollection("Mercado", {capped: true, max:3})
+MongoServerError[InvalidOptions]: the 'size' field is required when 'capped' is true
+mercado>
+{ ok: 1 }
+mercado>
+
+mercado> switch Mercado
+Uncaught:
+SyntaxError: Unexpected token, expected "(" (1:7)
+
+> 1 | switch Mercado
+    |        ^
+  2 |
+
+mercado> db.createCollection("Mercado", {capped: true, max:3})
+MongoServerError[InvalidOptions]: the 'size' field is required when 'capped' is true
+mercado> db
+mercado
+mercado> db.createCollection("Mercado", {capped:true, max:3})
+MongoServerError[InvalidOptions]: the 'size' field is required when 'capped' is true
+mercado> db.createCollection("Mercado", {capped:true, size:1000000, max:3})
+MongoServerError[NamespaceExists]: namespace mercado.Mercado already exists, but with different options: { uuid: UUID("66b5f3d1-0850-465b-8b0a-0765ae28f129"), capped: true, size: 1000000 }
+mercado> db.createCollection("Mercado", {capped:true, max:5})
+MongoServerError[InvalidOptions]: the 'size' field is required when 'capped' is true
+mercado> db.createCollection("mercado", {capped:true,size:100000, max:5})
+{ ok: 1 }
+mercado> db.mercado.InsertOne({nomeProduto: 'Amaciante', preco: 15.99, estoque: 20})
+TypeError: db.mercado.InsertOne is not a function
+mercado> db.mercado.InsertOne({nomeProduto: 'Amaciante', preco: 15.99, estoque: 20})
+TypeError: db.mercado.InsertOne is not a function
+mercado> db.mercado.InsertOne({id: 01, nomeProduto: 'Amaciante', preco: 15.99, estoque: 20})
+TypeError: db.mercado.InsertOne is not a function
+mercado> db.mercado.InsertOne({id: 01, nomeProduto: 'Amaciante', preco: '15.99', estoque: 20})
+TypeError: db.mercado.InsertOne is not a function
+mercado> db.mercado.InsertOne({_id: 01, nomeProduto: 'Amaciante', preco: '15.99', estoque: 20})
+TypeError: db.mercado.InsertOne is not a function
+mercado> db.mercado.InsertOne({_id: "01", nomeProduto: "Amaciante", preco: 15.99, estoque: 20})
+TypeError: db.mercado.InsertOne is not a function
+mercado> db.mercado.insertOne({_id: "01", nomeProduto: "Amaciante", preco: 15.99, estoque: 20})
+{ acknowledged: true, insertedId: '01' }
+mercado>
