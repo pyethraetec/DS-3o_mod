@@ -1,0 +1,18 @@
+
+
+mesclando teste de endpoint no postman com 
+
+mapGet = é o que vai acessar na url local, nome
+withName = diferenciar endpoint, cpf
+
+mesmo nome e metodo dá problema
+
+
+endpoint de inclusão
+
+método post
+
+@
+
+
+executeNonQuery = insert, delete e update
