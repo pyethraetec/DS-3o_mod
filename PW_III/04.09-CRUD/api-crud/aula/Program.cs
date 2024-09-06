@@ -14,10 +14,10 @@ var app = builder.Build();
 app.MapGet("/listar", () =>
 {
     MySqlConnection conexao = new MySqlConnection();
-    conexao.ConnectionString = "server=localhost;password=aluno.etec;User Id=aluno;database=teste;";
+    conexao.ConnectionString = "server=localhost;password=aluno.etec;User Id=aluno;database=escola;";
     conexao.Open();
 
-    MySqlCommand sql = new MySqlCommand("SELECT * FROM cursos",conexao);
+    MySqlCommand sql = new MySqlCommand("SELECT * FROM aluno",conexao);
 
     DataTable dados = new DataTable();
     dados.Load(sql.ExecuteReader());
@@ -26,24 +26,24 @@ app.MapGet("/listar", () =>
 
     return Results.Ok(JsonDocument.Parse(JsonConvert.SerializeObject(dados)));
 })
-.WithName("ListarCursos");
+.WithName("ListarAluno");
 
 app.MapPost("/incluir", ([FromBody] JsonObject dados) =>
 {
-    if(string.IsNullOrEmpty((string)dados["curso"]) || string.IsNullOrEmpty((string)dados["vagas"]) || string.IsNullOrEmpty((string)dados["periodo"]))
+    if(string.IsNullOrEmpty((string)dados["nome"]) || string.IsNullOrEmpty((string)dados["email"]) || string.IsNullOrEmpty((string)dados["RG"]))
     {
         return Results.BadRequest(new { erro = "Campos em branco" });
     }
 
     MySqlConnection conexao = new MySqlConnection();
-    conexao.ConnectionString = "server=localhost;password=aluno.etec;User Id=aluno;database=teste;";
+    conexao.ConnectionString = "server=localhost;password=aluno.etec;User Id=aluno;database=escola;";
     conexao.Open();
 
-    MySqlCommand sql = new MySqlCommand("INSERT INTO cursos(curso,vagas,periodo) " +
+    MySqlCommand sql = new MySqlCommand("INSERT INTO aluno(Nome,email,RG) " +
         "VALUES(@c,@v,@p)", conexao);
-    sql.Parameters.AddWithValue("@c", dados["curso"]);
-    sql.Parameters.AddWithValue("@v", dados["vagas"]);
-    sql.Parameters.AddWithValue("@p", dados["periodo"]);
+    sql.Parameters.AddWithValue("@c", dados["Nome"]);
+    sql.Parameters.AddWithValue("@v", dados["email"]);
+    sql.Parameters.AddWithValue("@p", dados["RG"]);
 
     var retorno = sql.ExecuteNonQuery();
 
@@ -59,26 +59,26 @@ app.MapPost("/incluir", ([FromBody] JsonObject dados) =>
     }
     
 })
-.WithName("IncluirCursos");
+.WithName("IncluirAluno");
 
 
-app.MapPost("/alterar/{cod}", ([FromBody] JsonObject dados, string cod) =>
+app.MapPost("/alterar/{id}", ([FromBody] JsonObject dados, string id) =>
 {
-    if (string.IsNullOrEmpty((string)dados["curso"]) || string.IsNullOrEmpty((string)dados["vagas"]) || string.IsNullOrEmpty((string)dados["periodo"]))
+    if (string.IsNullOrEmpty((string)dados["Nome"]) || string.IsNullOrEmpty((string)dados["email"]) || string.IsNullOrEmpty((string)dados["RG"]))
     {
         return Results.BadRequest(new { erro = "Campos em branco" });
     }
 
     MySqlConnection conexao = new MySqlConnection();
-    conexao.ConnectionString = "server=localhost;password=aluno.etec;User Id=aluno;database=teste;";
+    conexao.ConnectionString = "server=localhost;password=aluno.etec;User Id=aluno;database=escola;";
     conexao.Open();
 
-    MySqlCommand sql = new MySqlCommand("UPDATE cursos SET curso = @c, vagas = @v, periodo = @p " +
-        "WHERE cod = @cod", conexao);
-    sql.Parameters.AddWithValue("@c", dados["curso"]);
-    sql.Parameters.AddWithValue("@v", dados["vagas"]);
-    sql.Parameters.AddWithValue("@p", dados["periodo"]);
-    sql.Parameters.AddWithValue("@cod", cod);
+    MySqlCommand sql = new MySqlCommand("UPDATE aluno SET Nome = @c, email = @v, RG = @p " +
+        "WHERE id = @id", conexao);
+    sql.Parameters.AddWithValue("@c", dados["Nome"]);
+    sql.Parameters.AddWithValue("@v", dados["email"]);
+    sql.Parameters.AddWithValue("@p", dados["RG"]);
+    sql.Parameters.AddWithValue("@id", id);
 
     var retorno = sql.ExecuteNonQuery();
 
@@ -94,17 +94,17 @@ app.MapPost("/alterar/{cod}", ([FromBody] JsonObject dados, string cod) =>
     }
 
 })
-.WithName("AlterarCursos");
+.WithName("AlterarAluno");
 
 
-app.MapDelete("/excluir/{cod}", ([FromBody] JsonObject dados, string cod) =>
+app.MapDelete("/excluir/{id}", ([FromBody] JsonObject dados, string id) =>
 {
     MySqlConnection conexao = new MySqlConnection();
-    conexao.ConnectionString = "server=localhost;password=aluno.etec;User Id=aluno;database=teste;";
+    conexao.ConnectionString = "server=localhost;password=aluno.etec;User Id=aluno;database=escola;";
     conexao.Open();
 
-    MySqlCommand sql = new MySqlCommand("DELETE FROM cursos WHERE cod = @cod", conexao);
-    sql.Parameters.AddWithValue("@cod", cod);
+    MySqlCommand sql = new MySqlCommand("DELETE FROM aluno WHERE id = @id", conexao);
+    sql.Parameters.AddWithValue("@id", id);
 
     var retorno = sql.ExecuteNonQuery();
 
@@ -120,6 +120,6 @@ app.MapDelete("/excluir/{cod}", ([FromBody] JsonObject dados, string cod) =>
     }
 
 })
-.WithName("ExcluirCursos");
+.WithName("ExcluirAluno");
 
 app.Run();
