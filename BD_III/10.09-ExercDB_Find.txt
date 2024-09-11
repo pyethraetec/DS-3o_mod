@@ -1,0 +1,45 @@
+DBIII - Atividade Find
+
+Na Collection criada na última aula, localizar os seguintes dados:
+
+1. Listar todos os dados da collection;
+
+mercado> db.mercado.find()
+[ 
+  { _id: '01', nomeProduto: 'Amaciante', preco: 15.99, estoque: 20 },
+  { _id: '02', nomeProduto: 'Refrigerante', preco: 5.99, estoque: 10 },
+  { _id: '03', nomeProduto: 'Farinha', preco: 3.99, estoque: 60 },
+  { _id: '04', nomeProduto: 'Barra de chocolate', preco: 6.99, estoque: 45}
+  { _id: '05', nomeProduto: 'Coca cola', preco: 9.99, estoque: 30}
+]
+
+2. Listar o registro de id manual número 4;
+
+  mercado> db.mercado.findOne({_id:'02'})
+{ _id: '02', nomeProduto: 'Refrigerante', preco: 5.99, estoque: 10 }
+
+
+3. Listar os registros de id´s manuais 1,3 e 5
+
+mercado> db.mercado.findOne({_id:'01'})
+  { _id: '01', nomeProduto: 'Amaciante', preco: 15.99, estoque: 20 }
+mercado> db.mercado.findOne({_id:'03'})
+  { _id: '03', nomeProduto: 'Farinha', preco: 3.99, estoque: 60 },
+mercado> db.mercado.findOne({_id:'05'})
+  { _id: '05', nomeProduto: 'Coca cola', preco: 9.99, estoque: 30}
+
+
+4. Listar todos os registros de forma estruturada.
+
+db.mercado.find({}).pretty()
+
+mercado> db.mercado.find({}).pretty()
+[
+  { _id: '01', nomeProduto: 'Amaciante', preco: 15.99, estoque: 20 },
+  { _id: '02', nomeProduto: 'Refrigerante', preco: 5.99, estoque: 10 },
+  { _id: '03', nomeProduto: 'Farinha', preco: 3.99, estoque: 60 },
+  { _id: '04', nomeProduto: 'Barra de chocolate', preco: 6.99, estoque: 45}
+  { _id: '05', nomeProduto: 'Coca cola', preco: 9.99, estoque: 30}
+  }
+]
+
