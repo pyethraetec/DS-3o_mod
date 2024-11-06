@@ -1,0 +1,18 @@
+
+PlatCursos> db.createCollection("Cursos", {capped: true, size: 1000000})
+  db.Cursos.insertOne({Titulo: 'SQL básico para iniciantes', Desc: 'Aprenda o básico de SQL para aplicar em qualquer projeto', Categoria:'Banco de Dados', CargaHoraria:'26h', Instrutor: 'Anderson'})
+  db.Cursos.insertOne({Titulo: 'Fundamentos FrontEnd: HTML, CSS, Javascript', Desc: 'Aproveite essa oportunidade única de aprender os fundamentos do FrontEnd e crie sites responsivos', Categoria:'Desenvolvimento FrontEnd', CargaHoraria:'40h', Instrutor: 'Debora'})
+  db.Cursos.insertOne({Titulo: 'Java: Orientação a Objetos', Desc: 'Aplicando Orientação a Objetos na linguagem Java', Categoria:'Desenvolvimento BackEnd', CargaHoraria:'96h', Instrutor: 'Emerson'})
+
+db.createCollection("Alunos", {capped: true, size: 1000000})
+  db.Alunos.insertOne({Nome: 'Vitor Gabriel', Email: 'vitor@email.com', CursosInscritos: 'Java: Orientação a Objetos', Progresso: '70%'})
+  db.Alunos.insertOne({Nome: 'João Vitor', Email: 'joãovitor@email.com', CursosInscritos: 'Aprenda o básico de SQL para aplicar em qualquer projeto', Progresso: '30%'})
+  db.Alunos.insertOne({Nome: 'Miguel', Email: 'miguel@email.com', CursosInscritos: 'Fundamentos FrontEnd: HTML, CSS, Javascript', Progresso: '90%'})
+
+db.createCollection("Instrutores", {capped: true, size: 1000000})
+  db.Instrutores.insertOne({Nome: 'Debora', Especialidade: 'Desenvolvimento FrontEnd', CursosMinistrados: 'Fundamentos FrontEnd: HTML, CSS, Javascript', AvaliacaoMedia: '4 estrelas'})
+  db.Instrutores.insertOne({Nome: 'Anderson', Especialidade: 'Banco de Dados', CursosMinistrados: 'SQL básico para iniciantes', AvaliacaoMedia: '5 estrelas'})
+  db.Instrutores.insertOne({Nome: 'Emerson', Especialidade: 'Desenvolvimento BackEnd', CursosMinistrados: 'Java: Orientação a Objetos', AvaliacaoMedia: '3 estrelas'})
+
+db.createCollection("Inscricoes", {capped: true, size: 1000000})
+  db.Inscricoes.insertOne({Nome: 'Emerson', Especialidade: 'Desenvolvimento BackEnd', CursosMinistrados: 'Java: Orientação a Objetos', AvaliacaoMedia: '3 estrelas'})
